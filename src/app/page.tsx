@@ -23,6 +23,9 @@ export default function Home() {
         <h1>Coral Infantil de Setúbal</h1>
       </div>
       <ZoomParallax />
+      <div>
+        <h1>Livros</h1>
+      </div>
       <SmoothParallaxScroll />
     </main>
   );
