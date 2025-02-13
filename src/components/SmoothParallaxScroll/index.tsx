@@ -4,6 +4,7 @@ import styles from "./style.module.scss";
 import Image from "next/image";
 import Lenis from "lenis";
 import { useTransform, useScroll, motion } from "framer-motion";
+import { MotionValue } from "framer-motion";
 
 const images = [
   "1.jpg",
@@ -19,6 +20,11 @@ const images = [
   "11.jpg",
   "12.jpg",
 ];
+
+interface ColumnProps {
+  images: string[];
+  y: MotionValue<number>;
+}
 
 export default function Home() {
   const gallery = useRef(null);
@@ -59,20 +65,20 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.spacer}></div>
       <div ref={gallery} className={styles.gallery}>
-        <Column images={[images[0], images[1], images[2]]} y={y} />
-        <Column images={[images[3], images[4], images[5]]} y={y2} />
-        <Column images={[images[6], images[7], images[8]]} y={y3} />
-        <Column images={[images[9], images[10], images[11]]} y={y4} />
+        <Column images={images.slice(0, 3)} y={y} />
+        <Column images={images.slice(3, 6)} y={y2} />
+        <Column images={images.slice(6, 9)} y={y3} />
+        <Column images={images.slice(9, 12)} y={y4} />
       </div>
       <div className={styles.spacer}></div>
     </main>
   );
 }
 
-const Column = ({ images, y }: { images: any; y: any }) => {
+const Column = ({ images, y }: ColumnProps) => {
   return (
     <motion.div className={styles.column} style={{ y }}>
-      {images.map((src: any, i: number) => {
+      {images.map((src: string, i: number) => {
         return (
           <div key={i} className={styles.imageContainer}>
             <Image src={`/images/parallaxScroll/${src}`} alt="image" fill />

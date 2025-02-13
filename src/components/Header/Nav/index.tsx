@@ -30,6 +30,7 @@ export default function index() {
           const { title, href } = link;
           return (
             <motion.a
+              href={href}
               variants={slideIn}
               custom={i}
               initial="initial"

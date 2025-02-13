@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Button from "./Button";
 import styles from "./style.module.scss";
 import Nav from "./Nav";
+import Image from "next/image";
 
 const menu = {
   open: {
@@ -33,7 +34,7 @@ export default function Index() {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
-        <img src="/images/logo.png" alt="logo" width={100} height={100} />
+        <Image src="/images/logo.png" alt="logo" width={100} height={100} />
       </div>
       <div className={styles.header}>
         <motion.div
