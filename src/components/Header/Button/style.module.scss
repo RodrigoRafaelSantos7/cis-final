@@ -16,14 +16,15 @@
     .el {
       width: 100%;
       height: 100%;
-      background-color: #c9fd74;
+      background-color: #114a83;
       p {
         margin: 0px;
+        color: #efefef;
       }
       &:nth-of-type(2) {
         background-color: black;
         p {
-          color: #c9fd74;
+          color: #efefef;
         }
       }
       &:hover {

@@ -2,6 +2,7 @@
 import styles from "./index.module.css";
 import Lenis from "lenis";
 import { useEffect } from "react";
+import SmoothParallaxScroll from "~/components/SmoothParallaxScroll";
 import ZoomParallax from "~/components/ZoomParallax";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <ZoomParallax />
+      <SmoothParallaxScroll />
     </main>
   );
 }
