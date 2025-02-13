@@ -2,6 +2,7 @@
 import styles from "./index.module.css";
 import Lenis from "lenis";
 import { useEffect } from "react";
+import Footer from "~/components/Footer";
 import SmoothParallaxScroll from "~/components/SmoothParallaxScroll";
 import ZoomParallax from "~/components/ZoomParallax";
 
@@ -27,6 +28,7 @@ export default function Home() {
         <h1>Livros</h1>
       </div>
       <SmoothParallaxScroll />
+      <Footer />
     </main>
   );
 }
