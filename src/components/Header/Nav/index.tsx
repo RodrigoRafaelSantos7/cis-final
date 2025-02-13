@@ -19,7 +19,7 @@ export default function index() {
                 animate="enter"
                 exit="exit"
               >
-                <Link href={href}>{title}</Link>
+                <a href={href}>{title}</a>
               </motion.div>
             </div>
           );
