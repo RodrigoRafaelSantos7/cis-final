@@ -31,21 +31,26 @@ export default function Index() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className={styles.header}>
-      <motion.div
-        className={styles.menu}
-        variants={menu}
-        animate={isActive ? "open" : "closed"}
-        initial="closed"
-      >
-        <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
-      </motion.div>
-      <Button
-        isActive={isActive}
-        toggleMenu={() => {
-          setIsActive(!isActive);
-        }}
-      />
+    <div className={styles.container}>
+      <div className={styles.logo}>
+        <img src="/images/logo.png" alt="logo" width={100} height={100} />
+      </div>
+      <div className={styles.header}>
+        <motion.div
+          className={styles.menu}
+          variants={menu}
+          animate={isActive ? "open" : "closed"}
+          initial="closed"
+        >
+          <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
+        </motion.div>
+        <Button
+          isActive={isActive}
+          toggleMenu={() => {
+            setIsActive(!isActive);
+          }}
+        />
+      </div>
     </div>
   );
 }
