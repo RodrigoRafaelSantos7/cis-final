@@ -3,16 +3,16 @@
   top: 5vh;
   left: 0;
   text-align: center;
-  text-transform: uppercase;
   width: 100%;
   color: #114a83;
   z-index: 50;
 }
 
 .title {
-  font-size: 10vw;
-  font-weight: 900;
+  font-size: 8vw;
+  font-weight: 500;
   line-height: 1;
+  font-family: var(--font-monotype-corsiva);
 }
 
 @media (max-width: 768px) {

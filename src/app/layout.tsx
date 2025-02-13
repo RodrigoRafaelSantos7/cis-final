@@ -1,8 +1,15 @@
 import "~/styles/globals.css";
+import "~/styles/fonts.scss";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import Header from "~/components/Header";
+import localFont from "next/font/local";
+
+const monotypeCorsiva = localFont({
+  src: "../../public/fonts/monotype-corsiva.ttf",
+  variable: "--font-monotype-corsiva",
+});
 
 export const metadata: Metadata = {
   title: "Coral Infantil de Setúbal",
@@ -15,7 +22,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={GeistSans.className}>
+      <body className={`${GeistSans.className} ${monotypeCorsiva.variable}`}>
         <Header />
         {children}
       </body>
