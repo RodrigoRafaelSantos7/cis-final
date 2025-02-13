@@ -1,4 +1,6 @@
 .container {
+  margin-top: 50vh;
+  margin-bottom: 100vh;
   height: 300vh;
   position: relative;
   .sticky {
@@ -71,12 +73,5 @@
         }
       }
     }
-  }
-  .title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: white;
   }
 }

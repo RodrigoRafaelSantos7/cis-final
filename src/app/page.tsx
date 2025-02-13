@@ -19,6 +19,9 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
+      <div className={styles.zoomParallaxTitle}>
+        <h1>Coral Infantil de Setúbal</h1>
+      </div>
       <ZoomParallax />
       <SmoothParallaxScroll />
     </main>
